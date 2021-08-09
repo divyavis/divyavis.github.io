@@ -1,0 +1,65 @@
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+html{
+  min-height: 100%;
+  overflow: hidden;
+}
+body{
+  height: calc(100vh - 8em);
+  padding: 4em;
+  color: rgba(0, 0, 0, 0.75);
+  font-family: 'Anonymous Pro', monospace;  
+  background-color: rgb(243, 245, 165);  
+}
+
+.topnav {
+    overflow: hidden;
+}
+  
+.topnav a {
+    float: right;
+    color:  rgba(0, 0, 0, 0.75);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.topnav a:hover {
+    background-color: rgba(209, 209, 209, 0.6);
+    color: black;
+}
+  
+.topnav a.active {
+    background-color: #7c9c5e;
+    color: white;
+}
+
+.heyimdiv {
+    position: relative;
+    top: 5%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(0, 0, 0, 0.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(70) 1s 1 normal both,
+             blinkTextCursor 500ms steps(70) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(0, 0, 0, 0.75);}
+  to{border-right-color: transparent;}
+}
