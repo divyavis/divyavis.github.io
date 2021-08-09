@@ -1,5 +1,5 @@
 /* Google Fonts */
-@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+/* @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro); */
 
 /* Global */
 html{
@@ -10,11 +10,12 @@ body{
   height: calc(100vh - 8em);
   padding: 4em;
   color: rgba(0, 0, 0, 0.75);
-  font-family: 'Anonymous Pro', monospace;  
+  font-family: 'Monaco', monospace;  
   background-color: rgb(243, 245, 165);  
 }
 
 .topnav {
+    /* top: 3vw; */
     overflow: hidden;
 }
   
@@ -39,8 +40,8 @@ body{
 
 .heyimdiv {
     position: relative;
-    top: 5%;  
-    width: 24em;
+    top: 5vw;  
+    width: 25em;
     margin: 0 auto;
     border-right: 2px solid rgba(0, 0, 0, 0.75);
     font-size: 2.5vw;
@@ -50,14 +51,26 @@ body{
     transform: translateY(-50%);    
 }
 
+.homeimage {
+    position: relative;
+    top: 6vw;
+    left: 5vw;
+}
+
+.homeimage img {
+    max-width:22%;
+    height:auto;
+    display: block;
+}
+
 /* Animation */
 .anim-typewriter{
-  animation: typewriter 4s steps(70) 1s 1 normal both,
-             blinkTextCursor 500ms steps(70) infinite normal;
+  animation: typewriter 4s steps(70) 1s 1, 
+             blinkTextCursor 1000ms steps(70) infinite normal;
 }
 @keyframes typewriter{
   from{width: 0;}
-  to{width: 24em;}
+  to{width: 25em;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(0, 0, 0, 0.75);}
