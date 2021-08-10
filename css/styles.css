@@ -7,8 +7,7 @@ html{
   overflow: hidden;
 }
 body{
-  height: calc(100vh - 8em);
-  padding: 4em;
+  padding: 2vw;
   color: rgba(0, 0, 0, 0.75);
   font-family: 'Monaco', monospace;  
   background-color: rgb(243, 245, 165);  
@@ -41,7 +40,7 @@ body{
 .heyimdiv {
     position: relative;
     top: 5vw;  
-    width: 25em;
+    width: 27em;
     margin: 0 auto;
     border-right: 2px solid rgba(0, 0, 0, 0.75);
     font-size: 2.5vw;
@@ -53,14 +52,23 @@ body{
 
 .homeimage {
     position: relative;
-    top: 6vw;
-    left: 5vw;
+    top: 7vw;
+    left: 6vw;
 }
 
 .homeimage img {
     max-width:22%;
     height:auto;
     display: block;
+}
+
+.aboutme {
+    margin-left: 30%;
+    margin-right: 10%;
+    font-size: 1.15vw;
+    position: absolute;               
+    top: 20vw;                         /* 3 */
+    /* transform: translate(0, -50%) */
 }
 
 /* Animation */
@@ -70,7 +78,7 @@ body{
 }
 @keyframes typewriter{
   from{width: 0;}
-  to{width: 25em;}
+  to{width: 27em;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(0, 0, 0, 0.75);}
