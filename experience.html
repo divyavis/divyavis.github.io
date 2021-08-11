@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Divya Viswanathan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Divya's Portfolio">
+
+    <title>div's portfolio</title>
+
+    <!-- External Links to CSS files -->
+    <link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="css/slideshow.css" />
+    <!-- Adding font awesome icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<div class="topnav">
+    <a href="#resume">resume</a>
+    <a class="active" href="experience.html">experience</a>
+    <a href="index.html">home</a>
+</div>
+
+<h2 class="heyimdiv anim-typewriter">some of my fun projects and experiences: </h2>
+
+<body>
+
+    <div class="slideshow-container">
+    
+        <div class="mySlides">
+            <div class="slidesTitle">
+                <a href="https://www.qualtrics.com" target="_blank">
+                    <img src="https://eits.uga.edu/_resources/files/images/QualtricsXM_RBG.png" width="250vw" height="80vw" align="center">
+                </a>
+                <h2>Software Development Internship @ <a href="https://www.qualtrics.com" target="_blank">Qualtrics</a></h2>
+                <h3>May 2021 - Aug 2021</h3>
+            </div>
+            <ul>
+                <li>worked on the <a href="https://www.qualtrics.com/design-xm/conjoint-analysis/" target="_blank">Conjoint Analysis</a> product for the PX team, developing a new calculation type for the Choice Simulator</li>
+                <li>worked on extractive summarization techniques with the Conversational Analytics ML team</li>
+                <li>tech stack: React, Typescript, Javascript, Python, AWS</li>
+            </ul>
+        </div>
+    
+        <div class="mySlides">
+            <div class="slidesTitle">
+                <a href="https://www.utdallas.edu/" target="_blank">
+                    <img src="https://brand.utdallas.edu/brand/files/utd-bug.jpg" width="250vw" height="80vw" align="center">
+                </a>
+                <h2>Dr. Zhang's Computational Biology Lab @ <a href="https://labs.utdallas.edu/zhanglab/" target="_blank">UTD</a></h2>
+                <h3>June 2018 - Aug 2018</h3>
+            </div>
+            <ul>
+                <li>used statistical methods to perform single-cell RNA sequencing on cells, primarily at the post-transcriptional level</li>
+                <li>was a good introduction to computational biology research</li>
+                <li>tech stack: R, Python</li>
+            </ul>
+        </div>
+    
+        <div class="mySlides">
+            <div class="slidesTitle">
+                <a href="https://youtu.be/zyGN-h-D9_A" target="_blank">
+                    <img src="notes2notes.jpeg" width="175vw" height="104vw" align="center">
+                </a>
+                <h2>Notes2Notes Project</h2>
+            </div>
+            <ul>
+                <li>a digital journal where writing is analyzed with user's Spotify account to generate a playlist of songs that reflect emotions/thoughts by querying song lyrics </li>
+                <li>showcased on <a href="https://www.kosbie.net/cmu/spring-20/15-112/gallery.html" target="_blank">CMU 15-112 website</a></li>
+                <li>tech stack: Python, BeautifulSoup, Spotify API Library - Spotipy</li>
+            </ul>
+        </div>
+
+        <div class="mySlides">
+            <div class="slidesTitle">
+                <a>
+                    <img src="https://www.scdn.co/i/_global/open-graph-default.png" width="250vw" height="125vw" align="center">
+                </a>
+                <h2>My Spotify Behind The Scenes Project</h2>
+            </div>
+            <ul>
+                <li>a terminal application that queries sample Spotify data from listeners and artists</li>
+                <li>10 user stories ranging from simple to complex, with the complex ones involving some aggregations or multiple queries</li>
+                <li>tech stack: PostgreSQL, Psycopg2</li>
+            </ul>
+        </div>
+    
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+    </div>
+    
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+    
+</body>
+
+<div class="experienceFooter">
+    <footer>
+        <div class="footer-social-icons">
+            <a href="mailto: divyav@andrew.cmu.edu" class="fa fa-envelope"></a>
+            <a href="https://www.linkedin.com/in/divya-vis/" target="_blank" class="fa fa-linkedin"></a>
+            <a href="https://github.com/divyavis" target="_blank" class="fa fa-github"></a>
+            <a href="https://open.spotify.com/user/divviswa?si=8ea76c7d7264491a" target="_blank" class="fa fa-spotify"></a>
+        </div>
+    </footer>
+</div>
